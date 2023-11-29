@@ -1,40 +1,30 @@
-import { createClient } from '@/utils/supabase/server'
-import Link from 'next/link'
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
+"use server";
+import Link from "next/link";
+import { signOut } from "@/app/actions/supabase/sign-out";
+import { getUser } from "@/app/actions/supabase/get-user";
+
+import { Button } from "@nextui-org/react";
 
 export default async function AuthButton() {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore)
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  const signOut = async () => {
-    'use server'
-
-    const cookieStore = cookies()
-    const supabase = createClient(cookieStore)
-    await supabase.auth.signOut()
-    return redirect('/login')
-  }
+  const user = await getUser();
 
   return user ? (
     <div className="flex items-center gap-4">
       Hey, {user.email}!
       <form action={signOut}>
-        <button className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover">
+        <Button
+          radius="full"
+          className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
+        >
           Logout
-        </button>
+        </Button>
       </form>
     </div>
   ) : (
-    <Link
-      href="/login"
-      className="py-2 px-3 flex rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
-    >
-      Login
+    <Link href="/login">
+      <Button color="primary" variant="ghost" radius="full" href="/login">
+        Login
+      </Button>
     </Link>
-  )
+  );
 }
