@@ -16,7 +16,7 @@ import StripeTestCards from "@/components/stripe/stripe-test-cards";
 import { formatAmountForDisplay } from "@/utils/stripe/stripe-helpers";
 import * as config from "@/config/stripe";
 import getStripe from "@/utils/stripe/get-stripejs";
-import { createPaymentIntent } from "@/app/actions/stripe/stripe";
+import { createPaymentIntent } from "@/actions/stripe/stripe";
 
 function CheckoutForm(): JSX.Element {
   const [input, setInput] = React.useState<{

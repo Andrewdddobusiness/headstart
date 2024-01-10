@@ -7,7 +7,7 @@ import StripeTestCards from "@/components/stripe/stripe-test-cards";
 
 import { formatAmountForDisplay } from "@/utils/stripe/stripe-helpers";
 import * as config from "@/config/stripe";
-import { createCheckoutSession } from "@/app/actions/stripe/stripe";
+import { createCheckoutSession } from "@/actions/stripe/stripe";
 
 export default function CheckoutForm(): JSX.Element {
   const [loading] = useState<boolean>(false);

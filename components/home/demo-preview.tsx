@@ -5,10 +5,10 @@ export default function DemoPreview() {
     <div>
       <div className="flex flex-col items-center mb-12 ">
         <p className="md:text-3xl text-xl text-center font-bold">
-          see the demo
+          not convinced yet?
         </p>
-        <p className="md:text-xl text-sm text-center text-secondary-500">
-          watch a 3-min walkthrough of what you're getting
+        <p className="md:text-xl text-sm text-center text-zinc-500">
+          let's see after this 1-min video...
         </p>
       </div>
       <div className="flex flex-col items-center">

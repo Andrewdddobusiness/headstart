@@ -6,8 +6,10 @@ import { Providers } from "./providers";
 import "./globals.css";
 
 import BasicLayout from "@/components/layouts/basic-layout";
-import Header from "@/components/header/header";
+import NavBar from "@/components/nav-bar/nav-bar";
 import Footer from "@/components/footer/footer";
+
+import { getSession } from "@/actions/supabase/server-get";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -15,32 +17,27 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Starter Build",
+  title: "Headstart",
   description: "A starter kit for your next project.",
-  icons: {
-    icon: "../public/images/starter-build-logo-lightmode.png",
-  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getSession();
+
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <Head>
-        <link
-          rel="icon"
-          href="../public/images/starter-build-logo-lightmode.png"
-          sizes="any"
-        />
+        <link rel="icon" sizes="any" />
       </Head>
 
-      <body className="bg-background text-foreground">
+      <body className="dark">
         <Providers>
-          <main className="dark min-h-screen flex flex-col items-center ">
-            <Header />
+          <main className="min-h-screen flex flex-col items-center ">
+            <NavBar session={session} />
 
             <BasicLayout>{children}</BasicLayout>
 

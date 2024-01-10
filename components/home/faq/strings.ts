@@ -2,58 +2,42 @@ const strings = {
   items: [
     {
       key: "1",
-      ariaLabel: "Connected devices",
-
-      subtitle: "2 issues to fix now",
-      title: "Connected devices",
+      title: "disclaimer?",
+      description:
+        "this is a fun side project that is a proof-of-concept. quality of kits may vary.",
+    },
+    {
+      key: "1",
+      title: "how does it work?",
+      description:
+        "you will get a link to source code along with documentation in the readme.",
     },
     {
       key: "2",
-      ariaLabel: "Apps Permissions",
-
-      subtitle: "3 apps have read permissions",
-      title: "Apps Permissions",
+      title: "how do updates work?",
+      description:
+        "will be making updates to improve the quality of the kit combinations as time permits.",
     },
     {
       key: "3",
-      ariaLabel: "Pending tasks",
-
-      subtitle: "Complete your profile",
-      title: "Pending tasks",
+      title: "how much does it cost?",
+      description: "free!",
     },
     {
       key: "4",
-
-      subtitle: "Please, update now",
-      title: "Card expired",
+      title: "is there an open-source version?",
+      description: "nope.",
     },
     {
       key: "5",
-      ariaLabel: "Image",
-
-      subtitle: "Subtitle for Image",
-      title: "Image",
+      title: "who created and maintains headstart?",
+      description: "me @andrewdddo",
     },
     {
       key: "6",
-      ariaLabel: "Banknote",
-
-      subtitle: "Subtitle for Banknote",
-      title: "Banknote",
-    },
-    {
-      key: "7",
-      ariaLabel: "Sailboat",
-
-      subtitle: "Subtitle for Sailboat",
-      title: "Sailboat",
-    },
-    {
-      key: "8",
-      ariaLabel: "Flag Triangle Right",
-
-      subtitle: "Subtitle for Flag Triangle Right",
-      title: "Flag Triangle Right",
+      title: "why should i use headstart instead of building from scratch?",
+      description:
+        "headstart let's you quickly choose the services you want and add them to your boilerplate project.",
     },
   ],
 };

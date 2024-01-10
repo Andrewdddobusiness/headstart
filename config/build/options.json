@@ -1,0 +1,26 @@
+[
+  {
+    "framework": "next.js",
+    "database": null,
+    "payment": null,
+    "url": "https://github.com/headstartlabs/headstart-nextapp"
+  },
+  {
+    "framework": "next.js",
+    "database": "supabase",
+    "payment": null,
+    "url": "https://github.com/headstartlabs/headstart-nextapp-supabase"
+  },
+  {
+    "framework": "next.js",
+    "database": null,
+    "payment": "stripe",
+    "url": "https://github.com/headstartlabs/headstart-nextapp-stripe"
+  },
+  {
+    "framework": "next.js",
+    "database": "supabase",
+    "payment": "stripe",
+    "url": "https://github.com/headstartlabs/headstart-nextapp-supa-stripe"
+  }
+]

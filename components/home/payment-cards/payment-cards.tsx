@@ -8,19 +8,17 @@ export default function PaymentCards() {
     <div>
       <div className="mb-12">
         <p className="md:text-3xl text-xl text-center font-bold">
-          the best part? it's free.
+          the best part? it's <span className="text-primary">free.</span>
         </p>
-        <p className="md:text-xl text-sm text-center text-secondary-500">
+        <p className="md:text-xl text-sm text-center text-zinc-500">
           yeah, i'm not kidding...
         </p>
       </div>
 
-      <div className="w-2/3 flex flex-col items-center mx-auto">
-        <div className="w-full gap-4 grid grid-cols-12 grid-rows-1">
-          {strings.items.map((item: TItem) => (
-            <PaymentCard item={item} />
-          ))}
-        </div>
+      <div className="flex flex-wrap justify-center gap-4">
+        {strings.items.map((item: TItem) => (
+          <PaymentCard key={item.key} item={item} />
+        ))}
       </div>
     </div>
   );

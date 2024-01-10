@@ -1,17 +1,33 @@
+"use client";
+import React from "react";
+import { Link } from "@nextui-org/react";
+
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
 export default function Footer() {
+  const theme = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
-    <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-      <p>
-        Powered by{" "}
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Supabase
-        </a>
-      </p>
+    <footer
+      className={`w-full border-t p-4 flex justify-center text-center text-sm gap-4 ${
+        theme.theme === "dark" ? "border-zinc-900" : "border-zinc-200"
+      }`}
+    >
+      <Link href="/terms-of-service" className="text-sm">
+        Terms of Service
+      </Link>
+
+      <Link href="/privacy" className="text-sm">
+        Privacy Policy
+      </Link>
     </footer>
   );
 }
