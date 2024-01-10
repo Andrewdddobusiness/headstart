@@ -1,4 +1,4 @@
-import { formatAmountForDisplay } from "@/utils/stripe/stripe-helpers";
+// import { formatAmountForDisplay } from "@/utils/stripe/stripe-helpers";
 
 export default function CustomDonationInput({
   name,
@@ -20,19 +20,20 @@ export default function CustomDonationInput({
   className?: string;
 }): JSX.Element {
   return (
-    <label>
-      Custom donation amount ({formatAmountForDisplay(min, currency)}-
-      {formatAmountForDisplay(max, currency)}):
-      <input
-        type="range"
-        name={name}
-        min={min}
-        max={max}
-        step={step}
-        onChange={onChange}
-        value={value}
-        className={className}
-      ></input>
-    </label>
+    // <label>
+    //   Custom donation amount ({formatAmountForDisplay(min, currency)}-
+    //   {formatAmountForDisplay(max, currency)}):
+    //   <input
+    //     type="range"
+    //     name={name}
+    //     min={min}
+    //     max={max}
+    //     step={step}
+    //     onChange={onChange}
+    //     value={value}
+    //     className={className}
+    //   ></input>
+    // </label>
+    <></>
   );
 }

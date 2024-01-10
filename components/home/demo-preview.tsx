@@ -8,7 +8,7 @@ export default function DemoPreview() {
           not convinced yet?
         </p>
         <p className="md:text-xl text-sm text-center text-zinc-500">
-          let's see after this 1-min video...
+          let's see after this 2-min video...
         </p>
       </div>
       <div className="flex flex-col items-center">
