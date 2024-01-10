@@ -11,7 +11,7 @@ import Footer from "@/components/footer/footer";
 
 import { getSession } from "@/actions/supabase/server-get";
 
-const defaultUrl = process.env.VERCEL_URL
+const defaultUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
 
