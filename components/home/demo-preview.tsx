@@ -13,7 +13,7 @@ export default function DemoPreview() {
       </div>
       <div className="flex flex-col items-center">
         <div className="w-3/4">
-          <Video src="https://www.youtube.com/embed/aGtiQEiKUMg?si=kWxvOP8CynLitRTw" />
+          <Video src="https://www.youtube.com/embed/S5WV1lejx5A?si=oXlOdEoMornX3S--" />
         </div>
       </div>
     </div>
